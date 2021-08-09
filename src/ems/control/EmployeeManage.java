@@ -5,6 +5,7 @@ import ems.entity.Employee;
 import ems.entity.FulltimeEmployee;
 import ems.entity.ParttimeEmployee;
 import ems.interfaces.*;
+import ems.iterator.EmployeeCollection;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -88,9 +89,17 @@ public class EmployeeManage implements IActions<Employee>, IEServices {
     public void viewAll(ArrayList<Employee> objectList) {
         System.out.println("\tView all employees");
         System.out.println("\tID\tName\tDoB\tAddress\tPhone\tDepartment\tSalary\tSalary2");
-        objectList.forEach(employee -> {
-            System.out.println(employee.toString());
-        });
+        
+        EmployeeCollection ec = new EmployeeCollection(objectList);
+        Iterator<Employee> iter = ec.getIterator();
+        while (iter.hasNext()) {
+            Employee e = iter.next();
+            System.out.println(e.toString());
+        }
+        
+//        objectList.forEach(employee -> {
+//            System.out.println(employee.toString());
+//        });
     }
 
     @Override
