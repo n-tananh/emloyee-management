@@ -21,10 +21,10 @@ public class EmployeeCollection implements Collection {
     public Iterator getIterator() {
         return new EmployeeIterator();
     }
- 
+    
     class EmployeeIterator implements Iterator<Employee> {
         int currentIndex = 0;
-        
+
         @Override
         public boolean hasNext() {
             return currentIndex < list.size();
@@ -33,7 +33,7 @@ public class EmployeeCollection implements Collection {
         @Override
         public Employee next() {
             return list.get(currentIndex++);
-        }        
+        }
     }
-  
+
 }

@@ -1,6 +1,8 @@
 package ems.entity;
 
-public class Department {
+import java.io.Serializable;
+
+public class Department implements Serializable{
 
     private String id;
     private String name;
@@ -9,10 +11,6 @@ public class Department {
         return this.id;
     }
 
-    /**
-     *
-     * @param id
-     */
     public void setId(String id) {
         this.id = id;
     }
@@ -21,10 +19,6 @@ public class Department {
         return this.name;
     }
 
-    /**
-     *
-     * @param name
-     */
     public void setName(String name) {
         this.name = name;
     }

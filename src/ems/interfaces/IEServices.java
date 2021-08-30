@@ -6,9 +6,9 @@ import java.util.ArrayList;
 
 public interface IEServices {
 
-	/**
-	 * 
-	 */
-	 float salaryCalculator(ArrayList<Employee> objectList, String employee_id);
+    /**
+     *
+     */
+    float salaryCalculator(ArrayList<Employee> objectList);
 
 }

@@ -8,6 +8,7 @@ package ems.interfaces;
 /**
  *
  * @author Tan Anh
+ * @param <T>
  */
 public interface Iterator<T> {
     boolean hasNext();
